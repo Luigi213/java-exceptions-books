@@ -38,6 +38,7 @@ public class Biblioteca {
 				Libro libro = new Libro(nome, numPag, autore, editoria);
 				libArr[i] = libro;
 			} catch (Exception e) {
+				i--;
 				System.err.println("Errore nella lettura del libro, " + e.getMessage());
 			}
 		}
