@@ -46,9 +46,6 @@ public class Libro {
 	public void setEditore(String editore) {
 		this.editore = editore;
 	}
-	public String getFullName() {
-		return "libro: " + getLibro() + "autore: " + getAutore();
-	}
 	
 	@Override
 	public String toString() {
