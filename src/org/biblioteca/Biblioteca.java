@@ -20,25 +20,10 @@ public class Biblioteca {
 		System.out.println("Inserire il numero di libri");
 		int num = in.nextInt();
 		
-		int count = 0;
-		int choise = -1;
-		
 		Libro[] libArr = new Libro[num];
 		
-		while(true) {
-			
-			System.out.println("1 - inserire libro");
-			System.out.println("2 - uscire");
-			choise = in.nextInt();			
-			
-			if (choise < 1 || choise > 2) {
-				
-				System.out.println("Scelta non compresa, ritentare");
-				continue;
-			}
-			if (choise == 2) break;
-			
-			in.nextLine();
+		in.nextLine();
+		for(int i=0; i<num; i++) {
 			
 			System.out.println("Nome del libro?");
 			String nome = in.nextLine();
@@ -51,7 +36,7 @@ public class Biblioteca {
 			String editoria = in.nextLine();
 			try {
 				Libro libro = new Libro(nome, numPag, autore, editoria);
-				libArr[count++] = libro;
+				libArr[i] = libro;
 			} catch (Exception e) {
 				System.err.println("Errore nella lettura del libro, " + e.getMessage());
 			}
